@@ -1,5 +1,11 @@
 import PortfolioClient from "@/components/PortfolioClient";
+import ResumeLinkGuard from "@/components/ResumeLinkGuard";
 
 export default function Home() {
-  return <PortfolioClient />;
+  return (
+    <>
+      <ResumeLinkGuard />
+      <PortfolioClient />
+    </>
+  );
 }
