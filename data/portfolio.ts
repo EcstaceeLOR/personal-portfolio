@@ -225,5 +225,5 @@ export const socials = [
   { label: "Discord", handle: "@ecstacee_of_mx", href: "#discord", icon: "message" },
   { label: "Medium", handle: "@abdulmuizademola9", href: "https://medium.com/@abdulmuizademola9", icon: "book" },
   { label: "Email", handle: "abdulmuizademola9@gmail.com", href: "mailto:abdulmuizademola9@gmail.com", icon: "mail" },
-  { label: "Resume", handle: "View CV folder", href: "https://drive.google.com/drive/folders/15t37yIj0kk313PTxtiR2GnG4tjV1sGKo", icon: "file" },
+  { label: "Resume", handle: "View / Download", href: "/resume/Abdulmuiz-Ademola-Abdulkabir-Resume.pdf", icon: "file" },
 ];
