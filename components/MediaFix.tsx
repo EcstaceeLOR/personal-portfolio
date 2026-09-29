@@ -91,8 +91,16 @@ export default function MediaFix() {
       }
     };
 
+    const patchPortfolioStats = () => {
+      const featuredBuilds = document.querySelector<HTMLElement>(
+        ".about-stats > div:first-child strong",
+      );
+      if (featuredBuilds) featuredBuilds.textContent = "10+";
+    };
+
     void applyOriginalMedia();
     void patchResume();
+    patchPortfolioStats();
 
     return () => {
       cancelled = true;
