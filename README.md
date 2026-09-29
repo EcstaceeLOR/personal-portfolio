@@ -2,6 +2,8 @@
 
 A single-page, data-driven portfolio for Abdulmuiz Ademola Abdulkabir (Ecstacee).
 
+**Live portfolio:** https://abdulmuiz-a-abdulkabir.vercel.app/
+
 ## Local development
 
 ```bash
