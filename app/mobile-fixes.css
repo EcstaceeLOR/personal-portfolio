@@ -1,0 +1,79 @@
+/* Mobile layout corrections loaded after globals.css. */
+
+@media (max-width: 780px) {
+  .hackathon-list {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .hackathon-row {
+    grid-template-columns: 34px minmax(0, 1fr) auto;
+    grid-template-areas:
+      "number project year"
+      ". event event"
+      ". track track";
+    column-gap: 12px;
+    row-gap: 8px;
+    align-items: start;
+    min-height: 0;
+    padding: 18px 0 20px;
+  }
+
+  .hackathon-number {
+    grid-area: number;
+    padding-top: 2px;
+  }
+
+  .hackathon-row > strong {
+    grid-area: project;
+    min-width: 0;
+    font-size: 15px;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+  }
+
+  .hackathon-row > span:nth-child(3) {
+    grid-area: event;
+    min-width: 0;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+  }
+
+  .hackathon-row > span:nth-child(4) {
+    grid-area: track;
+    min-width: 0;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+  }
+
+  .hackathon-row > span:nth-child(5) {
+    grid-area: year;
+    justify-self: end;
+    white-space: nowrap;
+    line-height: 1.35;
+  }
+
+  .subsection-title,
+  .subsection-title > div,
+  .subsection-title h3 {
+    min-width: 0;
+  }
+
+  .subsection-title h3 {
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 520px) {
+  .hackathon-row {
+    grid-template-columns: 30px minmax(0, 1fr) auto;
+    column-gap: 10px;
+    row-gap: 7px;
+    padding: 17px 0 19px;
+  }
+
+  .hackathon-row > span:nth-child(5),
+  .hackathon-number {
+    font-size: 11px;
+  }
+}
