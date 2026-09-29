@@ -61,6 +61,7 @@ export default function MediaFix() {
       style.dataset.mediaFix = "true";
       style.textContent = `
         .brand-avatar { display: none !important; }
+        .nav-actions > .icon-button:not(.mobile-menu-button) { display: none !important; }
         .moments-grid { grid-template-columns: 1fr !important; }
         .moment-a { min-height: 520px; }
         .moment-b,
