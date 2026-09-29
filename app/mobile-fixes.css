@@ -6,49 +6,60 @@
     min-width: 0;
   }
 
+  /*
+   * globals.css also contains mobile grid rules for this row. Use explicit
+   * placement + !important here so the event and track can never share the
+   * same grid row on narrow screens, regardless of stylesheet ordering.
+   */
   .hackathon-row {
-    grid-template-columns: 34px minmax(0, 1fr) auto;
-    grid-template-areas:
-      "number project year"
-      ". event event"
-      ". track track";
-    column-gap: 12px;
-    row-gap: 8px;
-    align-items: start;
-    min-height: 0;
-    padding: 18px 0 20px;
+    display: grid !important;
+    grid-template-columns: 34px minmax(0, 1fr) auto !important;
+    grid-template-rows: auto auto auto !important;
+    column-gap: 12px !important;
+    row-gap: 8px !important;
+    align-items: start !important;
+    min-height: 0 !important;
+    padding: 20px 0 22px !important;
   }
 
-  .hackathon-number {
-    grid-area: number;
+  .hackathon-row > .hackathon-number {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
     padding-top: 2px;
   }
 
   .hackathon-row > strong {
-    grid-area: project;
+    grid-column: 2 !important;
+    grid-row: 1 !important;
     min-width: 0;
     font-size: 15px;
     line-height: 1.35;
     overflow-wrap: anywhere;
   }
 
+  /* Event name */
   .hackathon-row > span:nth-child(3) {
-    grid-area: event;
+    grid-column: 2 / -1 !important;
+    grid-row: 2 !important;
     min-width: 0;
     line-height: 1.45;
     overflow-wrap: anywhere;
   }
 
+  /* Track */
   .hackathon-row > span:nth-child(4) {
-    grid-area: track;
+    grid-column: 2 / -1 !important;
+    grid-row: 3 !important;
     min-width: 0;
     line-height: 1.45;
     overflow-wrap: anywhere;
   }
 
+  /* Year */
   .hackathon-row > span:nth-child(5) {
-    grid-area: year;
-    justify-self: end;
+    grid-column: 3 !important;
+    grid-row: 1 !important;
+    justify-self: end !important;
     white-space: nowrap;
     line-height: 1.35;
   }
@@ -66,10 +77,15 @@
 
 @media (max-width: 520px) {
   .hackathon-row {
-    grid-template-columns: 30px minmax(0, 1fr) auto;
-    column-gap: 10px;
-    row-gap: 7px;
-    padding: 17px 0 19px;
+    grid-template-columns: 30px minmax(0, 1fr) auto !important;
+    column-gap: 10px !important;
+    row-gap: 9px !important;
+    padding: 19px 0 21px !important;
+  }
+
+  .hackathon-row > span:nth-child(3),
+  .hackathon-row > span:nth-child(4) {
+    font-size: 13px;
   }
 
   .hackathon-row > span:nth-child(5),
